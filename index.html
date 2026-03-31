@@ -18,17 +18,17 @@
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Space+Grotesk:wght@300;500;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
-    --bg:       #131e30;
-    --bg2:      #172139;
-    --surface:  #141b2d;
-    --border:   #1e2a45;
-    --ink:      #e2e8f4;
-    --ink-dim:  #7d8eb5;
-    --ink-faint:#3a4b6e;
-    --red:      #ff5e5b;
-    --amber:    #f5a623;
-    --green:    #3dd68c;
-    --blue:     #4f8ef7;
+    --bg:       #f0f4fb;
+    --bg2:      #e6edf8;
+    --surface:  #d8e3f2;
+    --border:   #bccde6;
+    --ink:      #0d1b35;
+    --ink-dim:  #3d527a;
+    --ink-faint:#8aa0c4;
+    --red:      #d63031;
+    --amber:    #e67e22;
+    --green:    #0a8f5c;
+    --blue:     #1a56db;
     --mono:     'JetBrains Mono', monospace;
     --serif:    'Space Grotesk', sans-serif;
   }
@@ -65,7 +65,8 @@
     align-items: center;
     justify-content: space-between;
     padding: 18px 56px;
-    background: rgba(19,30,48,0.93);
+    background: rgba(240,244,251,0.95);
+    box-shadow: 0 1px 0 var(--border);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid var(--border);
   }
@@ -354,10 +355,10 @@
   }
 
   .chip:hover { border-color: var(--ink); color: var(--ink); }
-  .chip.r { border-color: rgba(192,57,43,0.3); color: var(--red); background: rgba(192,57,43,0.04); }
-  .chip.a { border-color: rgba(176,125,42,0.3); color: var(--amber); background: rgba(176,125,42,0.04); }
-  .chip.g { border-color: rgba(42,122,79,0.3); color: var(--green); background: rgba(42,122,79,0.04); }
-  .chip.b { border-color: rgba(26,82,118,0.3); color: var(--blue); background: rgba(26,82,118,0.04); }
+  .chip.r { border-color: rgba(214,48,49,0.35); color: var(--red); background: rgba(214,48,49,0.07); }
+  .chip.a { border-color: rgba(230,126,34,0.35); color: var(--amber); background: rgba(230,126,34,0.07); }
+  .chip.g { border-color: rgba(10,143,92,0.35); color: var(--green); background: rgba(10,143,92,0.07); }
+  .chip.b { border-color: rgba(26,86,219,0.35); color: var(--blue); background: rgba(26,86,219,0.07); }
 
   /* ── PROJECTS ── */
   .proj-list { display: flex; flex-direction: column; gap: 2px; }
@@ -525,7 +526,7 @@
 
   .code-snip .kw  { color: #79b8ff; }
   .code-snip .str { color: #9ecbff; }
-  .code-snip .cm  { color: #3a4b6e; font-style: italic; }
+  .code-snip .cm  { color: #5d7aaa; font-style: italic; }
 
   /* ── FOOTER ── */
   footer {
