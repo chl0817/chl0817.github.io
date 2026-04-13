@@ -687,7 +687,7 @@
           <span class="chip r">TensorFlow</span>
           <span class="chip r">Keras</span>
           <span class="chip r">scikit-learn</span>
-          <span class="chip r">timm</span>
+          <span class="chip r">PEFT / bitsandbytes</span>
         </div>
       </div>
       <div class="skill-cell">
@@ -695,6 +695,7 @@
         <div class="tag-wrap">
           <span class="chip a">Transfer Learning</span>
           <span class="chip a">Multi-label Classification</span>
+          <span class="chip a">LLM Fine-Tuning (QLoRA)</span>
           <span class="chip a">Deep Q-Network</span>
           <span class="chip a">Test-Time Training</span>
           <span class="chip a">Data Augmentation</span>
@@ -735,8 +736,8 @@
         <div class="tag-wrap">
           <span class="chip">CUDA / GPU</span>
           <span class="chip">Colab A100</span>
-          <span class="chip">Pygame</span>
-          <span class="chip">HTML / CSS</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">Docker</span>
         </div>
       </div>
     </div>
@@ -751,6 +752,47 @@
     <div class="sec-rule"></div>
   </div>
   <div class="proj-list">
+
+    <!-- News Topic Classification: BERT vs. QLoRA LLM -->
+    <div class="proj-card">
+      <div class="proj-accent blue"></div>
+      <div class="proj-body">
+        <div class="proj-head">
+          <h3 class="proj-name">News Topic Classification: BERT vs. QLoRA Fine-Tuned LLM</h3>
+          <span class="proj-period">Jan – Mar 2026</span>
+        </div>
+        <p class="proj-sub">
+          End-to-end NLP pipeline comparing full BERT fine-tuning against QLoRA-adapted Mistral-7B
+          on AG News (120K samples, 4 classes), with FastAPI + Docker deployment.
+        </p>
+        <ul class="proj-bullets">
+          <li>Fine-tuned bert-base-uncased (110M params) achieving 94.49% accuracy / 0.9449 macro F1; compared against QLoRA Mistral-7B at 90.71% accuracy with only ~13.6M adapter parameters</li>
+          <li>Applied QLoRA with 4-bit NF4 quantization reducing GPU memory to ~5.2 GB on a single A100, LoRA rank-16 adapters on all attention projections (q/k/v/o), and paged AdamW 8-bit optimizer</li>
+          <li>Conducted LoRA rank ablation (r = 4, 8, 16, 32, 64) — rank-16 optimal (F1 = 0.9291 on 10% subset) with diminishing returns beyond; per-class confusion matrix and error analysis across all 4 categories</li>
+          <li>Deployed fine-tuned BERT as a REST API via FastAPI with single and batch inference endpoints, containerized with Docker for reproducible serving</li>
+        </ul>
+        <div class="proj-chips">
+          <span class="chip r">PyTorch</span>
+          <span class="chip r">Hugging Face</span>
+          <span class="chip a">QLoRA / LoRA</span>
+          <span class="chip a">LLM Fine-Tuning</span>
+          <span class="chip b">NLP</span>
+          <span class="chip b">FastAPI</span>
+          <span class="chip">Docker</span>
+        </div>
+      </div>
+      <div class="proj-sidebar">
+        <div class="metric">
+          <span class="metric-v blue">0.9449</span>
+          <div class="metric-l">BERT F1</div>
+        </div>
+        <div class="metric-div"></div>
+        <div class="metric">
+          <span class="metric-v blue">94.49%</span>
+          <div class="metric-l">Accuracy</div>
+        </div>
+      </div>
+    </div>
 
     <!-- Plant Disease -->
     <div class="proj-card">
