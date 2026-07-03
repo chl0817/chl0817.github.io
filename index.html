@@ -375,6 +375,7 @@
   .proj-accent.red   { background: var(--red); }
   .proj-accent.amber { background: var(--amber); }
   .proj-accent.blue  { background: var(--blue); }
+  .proj-accent.green { background: var(--green); }
 
   .proj-body { padding: 36px 40px 36px 44px; }
 
@@ -420,6 +421,7 @@
   .metric-v.red   { color: var(--red); }
   .metric-v.amber { color: var(--amber); }
   .metric-v.blue  { color: var(--blue); }
+  .metric-v.green { color: var(--green); }
 
   .metric-l { font-size: 10px; font-weight: 600; letter-spacing: 1.5px; text-transform: uppercase; color: var(--ink-faint); margin-top: 2px; }
   .metric-div { width: 40px; height: 1px; background: var(--border); }
@@ -611,6 +613,7 @@
     <li><a href="#projects">Projects</a></li>
     <li><a href="#blog">Blog</a></li>
     <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
   <div class="nav-pill">Open to MLE Roles</div>
@@ -696,6 +699,7 @@
           <span class="chip a">Transfer Learning</span>
           <span class="chip a">Multi-label Classification</span>
           <span class="chip a">LLM Fine-Tuning (QLoRA)</span>
+          <span class="chip a">LLM Orchestration</span>
           <span class="chip a">Deep Q-Network</span>
           <span class="chip a">Test-Time Training</span>
           <span class="chip a">Data Augmentation</span>
@@ -705,20 +709,20 @@
         <div class="skill-label green">Languages</div>
         <div class="tag-wrap">
           <span class="chip g">Python</span>
+          <span class="chip g">Go</span>
           <span class="chip g">Java</span>
           <span class="chip g">JavaScript</span>
-          <span class="chip g">R</span>
           <span class="chip g">SQL</span>
         </div>
       </div>
       <div class="skill-cell">
-        <div class="skill-label blue">Data &amp; Vision</div>
+        <div class="skill-label blue">Data &amp; NLP</div>
         <div class="tag-wrap">
+          <span class="chip b">Hugging Face</span>
+          <span class="chip b">LangGraph</span>
           <span class="chip b">NumPy</span>
           <span class="chip b">Pandas</span>
-          <span class="chip b">Stable Diffusion 2</span>
           <span class="chip b">OpenAI API</span>
-          <span class="chip b">Hugging Face</span>
         </div>
       </div>
       <div class="skill-cell">
@@ -734,10 +738,10 @@
       <div class="skill-cell">
         <div class="skill-label">Compute &amp; Infra</div>
         <div class="tag-wrap">
-          <span class="chip">CUDA / GPU</span>
-          <span class="chip">Colab A100</span>
           <span class="chip">FastAPI</span>
           <span class="chip">Docker</span>
+          <span class="chip">Redis</span>
+          <span class="chip">Kafka</span>
         </div>
       </div>
     </div>
@@ -752,6 +756,46 @@
     <div class="sec-rule"></div>
   </div>
   <div class="proj-list">
+
+    <!-- Clinical Care-Plan Service -->
+    <div class="proj-card">
+      <div class="proj-accent green"></div>
+      <div class="proj-body">
+        <div class="proj-head">
+          <h3 class="proj-name">Clinical Care-Plan Service — End-to-End LLM Application</h3>
+          <span class="proj-period">May – Jul 2026</span>
+        </div>
+        <p class="proj-sub">
+          Containerized service generating clinical care plans from de-identified patient records,
+          orchestrated as a LangGraph state machine with structured-output validation and observability.
+        </p>
+        <ul class="proj-bullets">
+          <li>Designed and deployed an end-to-end service with FastAPI endpoints and Docker containerization; served responses at ~1.5s p95 latency</li>
+          <li>Built a multi-stage pipeline (generation → verification → audit → storage) with Pydantic + JSON mode validation at 99%+ valid-parse rate and retry / fallback for malformed responses</li>
+          <li>Engineered observability: per-request audit logging, 200-case evaluation harness, and feature-flag-gated version switching that caught regressions from prompt changes before release</li>
+          <li>Implemented orchestration as a LangGraph state machine with conditional routing and parallel sub-tasks, cutting unsupported content by ~60% vs. direct-prompt baseline</li>
+        </ul>
+        <div class="proj-chips">
+          <span class="chip r">LangGraph</span>
+          <span class="chip r">FastAPI</span>
+          <span class="chip a">LLM Orchestration</span>
+          <span class="chip a">Pydantic</span>
+          <span class="chip b">Docker</span>
+          <span class="chip">Eval Harness</span>
+        </div>
+      </div>
+      <div class="proj-sidebar">
+        <div class="metric">
+          <span class="metric-v green">1.5s</span>
+          <div class="metric-l">p95 Latency</div>
+        </div>
+        <div class="metric-div"></div>
+        <div class="metric">
+          <span class="metric-v green">99%+</span>
+          <div class="metric-l">Parse Rate</div>
+        </div>
+      </div>
+    </div>
 
     <!-- News Topic Classification: BERT vs. QLoRA LLM -->
     <div class="proj-card">
@@ -1075,6 +1119,21 @@
     <h2 class="sec-title">Experience</h2>
     <div class="sec-rule"></div>
   </div>
+  <div class="exp-card" style="margin-bottom:2px;">
+    <div class="exp-left">
+      <div class="exp-role">Software Development Engineer Intern</div>
+      <div class="exp-org">ByteDance — Recruiting / HR Tech</div>
+      <div class="exp-period">Mar 2022 – Jun 2022</div>
+    </div>
+    <div>
+      <ul class="proj-bullets" style="margin-bottom:0;">
+        <li>Designed and built backend microservices in Go and Python, shipping REST and gRPC APIs that powered candidate sourcing, applicant tracking, and interview-scheduling workflows used by 50+ recruiters</li>
+        <li>Built a candidate search and filtering service backed by MySQL with Redis caching, reducing p95 query latency by 35% and serving 10K+ daily searches over a 100K+ candidate index</li>
+        <li>Implemented an event-driven data pipeline with Kafka to synchronize and enrich candidate records across systems, replacing manual reconciliation and saving ~8 hours/week</li>
+        <li>Raised service test coverage to 85% with unit and integration tests, drove design and code reviews, and authored technical documentation for handoff</li>
+      </ul>
+    </div>
+  </div>
   <div class="exp-card">
     <div class="exp-left">
       <div class="exp-role">Undergraduate Teaching Assistant</div>
@@ -1104,8 +1163,8 @@
         <h3 class="contact-head">Looking for an <em>MLE</em> full-time opportunity.</h3>
         <p class="contact-sub">
           Actively seeking full-time Machine Learning Engineer positions.
-          I bring hands-on experience building CV pipelines, RL agents, and robust
-          training workflows — eager to contribute to teams shipping real ML systems.
+          I bring hands-on experience building LLM applications, NLP pipelines, CV systems,
+          and robust training workflows — eager to contribute to teams shipping real ML systems.
         </p>
         <a href="mailto:cl885@gwmail.gwu.edu" class="contact-item">
           <div class="c-ico">✉</div>
@@ -1133,9 +1192,10 @@
         <div class="code-snip">
 <span class="cm"># Research areas I'm excited about</span>
 interests = {
+    <span class="str">"llm"</span>:    [<span class="str">"orchestration"</span>, <span class="str">"fine-tuning"</span>],
+    <span class="str">"nlp"</span>:    [<span class="str">"text classification"</span>, <span class="str">"eval"</span>],
     <span class="str">"vision"</span>: [<span class="str">"OOD robustness"</span>, <span class="str">"SSL"</span>],
-    <span class="str">"rl"</span>:     [<span class="str">"multi-agent"</span>, <span class="str">"sim2real"</span>],
-    <span class="str">"infra"</span>:  [<span class="str">"scalable training"</span>, <span class="str">"eval"</span>],
+    <span class="str">"infra"</span>:  [<span class="str">"scalable serving"</span>, <span class="str">"MLOps"</span>],
 }</div>
       </div>
     </div>
