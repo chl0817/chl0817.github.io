@@ -3,18 +3,18 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Chang Li GWU — Machine Learning Engineer</title>
-<meta name="description" content="Chang Li, MSCS student at George Washington University (GWU). Machine Learning Engineer and Deep Learning Researcher specializing in computer vision, transfer learning, and reinforcement learning.">
+<title>Chang Li — Software Engineer / AI Engineer</title>
+<meta name="description" content="Chang Li, MS in Computer Science (George Washington University). Software Engineer / AI Engineer building production LLM applications — RAG, structured-output validation, evaluation, and observability.">
 <meta name="author" content="Chang Li">
-<meta name="keywords" content="Chang Li, Chang Li GWU, Chang Li George Washington University, machine learning engineer, deep learning researcher, MSCS GWU">
+<meta name="keywords" content="Chang Li, Chang Li GWU, Chang Li George Washington University, software engineer, AI engineer, LLM engineer, production LLM applications, RAG, MSCS GWU">
 <meta name="robots" content="index, follow">
-<meta property="og:title" content="Chang Li GWU — Machine Learning Engineer">
-<meta property="og:description" content="Chang Li, MSCS student at George Washington University. Machine Learning Engineer & Deep Learning Researcher.">
+<meta property="og:title" content="Chang Li — Software Engineer / AI Engineer">
+<meta property="og:description" content="Chang Li, MS in Computer Science (George Washington University). Software Engineer / AI Engineer focused on production LLM applications, evaluation, and clean service design.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://chl0817.github.io">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Chang Li GWU — Machine Learning Engineer">
-<meta name="twitter:description" content="Chang Li, MSCS student at George Washington University. Machine Learning Engineer & Deep Learning Researcher.">
+<meta name="twitter:title" content="Chang Li — Software Engineer / AI Engineer">
+<meta name="twitter:description" content="Chang Li, MS in Computer Science (George Washington University). Software Engineer / AI Engineer focused on production LLM applications.">
 <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@300;400;500;600&family=Space+Grotesk:wght@300;500;700;800&display=swap" rel="stylesheet">
 <style>
   :root {
@@ -375,6 +375,7 @@
   .proj-accent.red   { background: var(--red); }
   .proj-accent.amber { background: var(--amber); }
   .proj-accent.blue  { background: var(--blue); }
+  .proj-accent.green { background: var(--green); }
 
   .proj-body { padding: 36px 40px 36px 44px; }
 
@@ -613,25 +614,27 @@
     <li><a href="#education">Education</a></li>
     <li><a href="#contact">Contact</a></li>
   </ul>
-  <div class="nav-pill">Open to MLE Roles</div>
+  <div class="nav-pill">Open to SWE / AI Roles</div>
 </nav>
 
 <!-- HERO -->
 <div id="about">
   <div id="hero">
     <div class="hero-left">
-      <div class="hero-eyebrow">MSCS · George Washington University · May 2026</div>
+      <div class="hero-eyebrow">MS Computer Science · George Washington University · 2026</div>
       <h1 class="hero-name">
         Chang<br>
         <span class="stroke">Li.</span>
       </h1>
-      <p class="hero-title">Machine Learning Engineer &amp; <strong>Deep Learning Researcher</strong></p>
+      <p class="hero-title">Software Engineer &amp; <strong>AI Engineer</strong></p>
       <p class="hero-desc">
-        MSCS student specializing in computer vision, transfer learning, and
-        reinforcement learning. I build production-grade ML pipelines — from
-        data preprocessing and controlled experimentation through rigorous
-        evaluation and failure-mode analysis. Seeking full-time MLE roles
-        where models ship to production.
+        Software engineer working at the intersection of software engineering and
+        applied AI, with a recent focus on production LLM applications. I built and
+        deployed a clinical care-plan system pairing retrieval-augmented generation (RAG)
+        with a multi-layer verification pipeline, structured-output validation, and an
+        audit + evaluation framework to keep outputs reliable in a high-stakes domain.
+        What I care about is the engineering that makes AI dependable — evaluation,
+        structured outputs, observability, and clean service design.
       </p>
       <div class="hero-btns">
         <a href="#projects" class="btn btn-primary">View Projects →</a>
@@ -640,31 +643,31 @@
     </div>
     <div class="hero-right">
       <div class="stat-row">
-        <div class="stat-n">91<sup>%</sup></div>
+        <div class="stat-n">~1.5<sup>s</sup></div>
         <div class="stat-desc">
-          <strong>Best Test F1</strong>
-          Plant Disease Multi-label Classification
+          <strong>p95 Latency</strong>
+          Clinical care-plan LLM service (FastAPI + Docker)
         </div>
       </div>
       <div class="stat-row">
-        <div class="stat-n">+29<sup>pp</sup></div>
+        <div class="stat-n">99<sup>%+</sup></div>
         <div class="stat-desc">
-          <strong>OOD Accuracy Gain</strong>
-          via Test-Time Training on blur covariates
+          <strong>Valid-Parse Rate</strong>
+          Structured-output validation (Pydantic + JSON mode)
         </div>
       </div>
       <div class="stat-row">
-        <div class="stat-n">18<sup>K</sup></div>
+        <div class="stat-n">~60<sup>%</sup></div>
         <div class="stat-desc">
-          <strong>Training Images</strong>
-          ResNet50 apple-leaf disease pipeline
+          <strong>Less Unsupported Content</strong>
+          LangGraph orchestration vs. direct-prompt baseline
         </div>
       </div>
       <div class="stat-row">
-        <div class="stat-n">3<sup>+</sup></div>
+        <div class="stat-n">50<sup>+</sup></div>
         <div class="stat-desc">
-          <strong>End-to-End ML Projects</strong>
-          CV · Reinforcement Learning · TTT
+          <strong>Recruiters Served</strong>
+          ByteDance internal recruiting platform (Go / Python)
         </div>
       </div>
     </div>
@@ -681,63 +684,63 @@
     </div>
     <div class="skills-table">
       <div class="skill-cell">
-        <div class="skill-label red">ML Frameworks</div>
+        <div class="skill-label red">Languages</div>
         <div class="tag-wrap">
-          <span class="chip r">PyTorch</span>
-          <span class="chip r">TensorFlow</span>
-          <span class="chip r">Keras</span>
-          <span class="chip r">scikit-learn</span>
-          <span class="chip r">PEFT / bitsandbytes</span>
+          <span class="chip r">Python</span>
+          <span class="chip r">Java</span>
+          <span class="chip r">Go</span>
+          <span class="chip r">SQL</span>
+          <span class="chip r">JavaScript</span>
         </div>
       </div>
       <div class="skill-cell">
-        <div class="skill-label amber">ML Concepts</div>
+        <div class="skill-label amber">AI / LLM</div>
         <div class="tag-wrap">
-          <span class="chip a">Transfer Learning</span>
-          <span class="chip a">Multi-label Classification</span>
+          <span class="chip a">RAG</span>
           <span class="chip a">LLM Fine-Tuning (QLoRA)</span>
-          <span class="chip a">Deep Q-Network</span>
-          <span class="chip a">Test-Time Training</span>
-          <span class="chip a">Data Augmentation</span>
+          <span class="chip a">Structured Outputs</span>
+          <span class="chip a">Prompt / Eval Infra</span>
+          <span class="chip a">LangGraph</span>
+          <span class="chip a">Observability</span>
         </div>
       </div>
       <div class="skill-cell">
-        <div class="skill-label green">Languages</div>
+        <div class="skill-label green">ML Frameworks</div>
         <div class="tag-wrap">
-          <span class="chip g">Python</span>
-          <span class="chip g">Java</span>
-          <span class="chip g">JavaScript</span>
-          <span class="chip g">R</span>
-          <span class="chip g">SQL</span>
+          <span class="chip g">PyTorch</span>
+          <span class="chip g">Hugging Face</span>
+          <span class="chip g">PEFT / bitsandbytes</span>
+          <span class="chip g">scikit-learn</span>
         </div>
       </div>
       <div class="skill-cell">
-        <div class="skill-label blue">Data &amp; Vision</div>
+        <div class="skill-label blue">Backend &amp; APIs</div>
         <div class="tag-wrap">
-          <span class="chip b">NumPy</span>
-          <span class="chip b">Pandas</span>
-          <span class="chip b">Stable Diffusion 2</span>
-          <span class="chip b">OpenAI API</span>
-          <span class="chip b">Hugging Face</span>
+          <span class="chip b">FastAPI</span>
+          <span class="chip b">REST</span>
+          <span class="chip b">gRPC</span>
+          <span class="chip b">Microservices</span>
+          <span class="chip b">Kafka</span>
         </div>
       </div>
       <div class="skill-cell">
-        <div class="skill-label">Developer Tools</div>
+        <div class="skill-label">Data &amp; Storage</div>
         <div class="tag-wrap">
-          <span class="chip">GitHub</span>
-          <span class="chip">Jupyter Notebook</span>
-          <span class="chip">Google Colab</span>
-          <span class="chip">VS Code</span>
           <span class="chip">MySQL</span>
+          <span class="chip">Redis</span>
+          <span class="chip">Pydantic</span>
+          <span class="chip">Pandas</span>
+          <span class="chip">NumPy</span>
         </div>
       </div>
       <div class="skill-cell">
-        <div class="skill-label">Compute &amp; Infra</div>
+        <div class="skill-label">Dev &amp; Infra</div>
         <div class="tag-wrap">
-          <span class="chip">CUDA / GPU</span>
-          <span class="chip">Colab A100</span>
-          <span class="chip">FastAPI</span>
           <span class="chip">Docker</span>
+          <span class="chip">Git</span>
+          <span class="chip">Linux</span>
+          <span class="chip">CI / Testing</span>
+          <span class="chip">CUDA / GPU</span>
         </div>
       </div>
     </div>
@@ -752,6 +755,48 @@
     <div class="sec-rule"></div>
   </div>
   <div class="proj-list">
+
+    <!-- Clinical Care-Plan Service — End-to-End LLM Application -->
+    <div class="proj-card">
+      <div class="proj-accent green"></div>
+      <div class="proj-body">
+        <div class="proj-head">
+          <h3 class="proj-name">Clinical Care-Plan Service — End-to-End LLM Application</h3>
+          <span class="proj-period">May – Jul 2026</span>
+        </div>
+        <p class="proj-sub">
+          Containerized service that generates clinical care plans from de-identified patient
+          records — deployed with FastAPI + Docker, with RAG, a multi-stage verification
+          pipeline, structured-output validation, and an audit + evaluation framework.
+        </p>
+        <ul class="proj-bullets">
+          <li>Designed and deployed an end-to-end service generating care plans from de-identified records, exposing FastAPI endpoints and containerizing with Docker; served responses at ~1.5s p95 latency</li>
+          <li>Built a multi-stage pipeline (generation → verification → audit → storage) with structured-output validation (Pydantic + JSON mode) at a 99%+ valid-parse rate and a retry / fallback path for malformed responses</li>
+          <li>Engineered observability and safe rollout: per-request audit logging (version, input, output, parameters), a 200-case evaluation harness, and feature-flag-gated version switching that caught prompt-change regressions before release</li>
+          <li>Implemented orchestration as a LangGraph state machine with conditional routing and parallel sub-tasks, cutting unsupported content by ~60% vs. a direct-prompt baseline — chosen after comparing CrewAI and the OpenAI Agents SDK</li>
+        </ul>
+        <div class="proj-chips">
+          <span class="chip g">Python</span>
+          <span class="chip g">FastAPI</span>
+          <span class="chip a">RAG</span>
+          <span class="chip a">LangGraph</span>
+          <span class="chip a">Structured Outputs</span>
+          <span class="chip b">Pydantic</span>
+          <span class="chip">Docker</span>
+        </div>
+      </div>
+      <div class="proj-sidebar">
+        <div class="metric">
+          <span class="metric-v" style="color:var(--green)">~1.5s</span>
+          <div class="metric-l">p95 Latency</div>
+        </div>
+        <div class="metric-div"></div>
+        <div class="metric">
+          <span class="metric-v" style="color:var(--green)">99%+</span>
+          <div class="metric-l">Valid Parse</div>
+        </div>
+      </div>
+    </div>
 
     <!-- News Topic Classification: BERT vs. QLoRA LLM -->
     <div class="proj-card">
@@ -1075,6 +1120,21 @@
     <h2 class="sec-title">Experience</h2>
     <div class="sec-rule"></div>
   </div>
+  <div class="exp-card" style="margin-bottom:2px;">
+    <div class="exp-left">
+      <div class="exp-role">Software Development Engineer Intern</div>
+      <div class="exp-org">ByteDance — Recruiting / HR Tech</div>
+      <div class="exp-period">Mar 2022 – Jun 2022 · Shanghai, China</div>
+    </div>
+    <div>
+      <ul class="proj-bullets" style="margin-bottom:0;">
+        <li>Designed and built backend microservices for the internal recruiting platform in Go and Python, shipping REST and gRPC APIs powering candidate sourcing, applicant tracking, and interview-scheduling workflows used by 50+ recruiters</li>
+        <li>Built a candidate search and filtering service backed by MySQL with Redis caching, reducing p95 query latency by 35% and serving 10K+ daily searches over a 100K+ candidate index</li>
+        <li>Implemented an event-driven data pipeline with Kafka to synchronize and enrich candidate records across systems, replacing a manual reconciliation step and saving recruiters roughly 8 hours per week</li>
+        <li>Raised service test coverage to 85% with unit and integration tests, drove design and code reviews, and authored technical documentation to hand the service off to the full-time team</li>
+      </ul>
+    </div>
+  </div>
   <div class="exp-card">
     <div class="exp-left">
       <div class="exp-role">Undergraduate Teaching Assistant</div>
@@ -1101,11 +1161,12 @@
     </div>
     <div class="contact-wrap">
       <div class="contact-left">
-        <h3 class="contact-head">Looking for an <em>MLE</em> full-time opportunity.</h3>
+        <h3 class="contact-head">Open to <em>SWE / AI</em> new-grad roles.</h3>
         <p class="contact-sub">
-          Actively seeking full-time Machine Learning Engineer positions.
-          I bring hands-on experience building CV pipelines, RL agents, and robust
-          training workflows — eager to contribute to teams shipping real ML systems.
+          Currently open to new-grad Software Engineer / AI Engineer positions.
+          I bring hands-on experience building production LLM applications, backend
+          microservices, and the evaluation and observability that make AI dependable —
+          eager to contribute to teams shipping real systems. Feel free to connect.
         </p>
         <a href="mailto:cl885@gwmail.gwu.edu" class="contact-item">
           <div class="c-ico">✉</div>
@@ -1123,19 +1184,19 @@
       <div class="contact-right">
         <div class="open-title">Currently Open To</div>
         <ul class="open-list">
-          <li>Machine Learning Engineer (Full-Time)</li>
-          <li>ML Research Engineer</li>
-          <li>Computer Vision Engineer</li>
-          <li>Applied Scientist / ML Scientist</li>
+          <li>Software Engineer (New-Grad)</li>
+          <li>AI Engineer / LLM Engineer</li>
+          <li>Backend / Platform Engineer</li>
+          <li>Applied AI / ML Engineer</li>
           <li>Open to Relocate</li>
           <li>Start date: July 2026</li>
         </ul>
         <div class="code-snip">
-<span class="cm"># Research areas I'm excited about</span>
-interests = {
-    <span class="str">"vision"</span>: [<span class="str">"OOD robustness"</span>, <span class="str">"SSL"</span>],
-    <span class="str">"rl"</span>:     [<span class="str">"multi-agent"</span>, <span class="str">"sim2real"</span>],
-    <span class="str">"infra"</span>:  [<span class="str">"scalable training"</span>, <span class="str">"eval"</span>],
+<span class="cm"># What I care about building</span>
+focus = {
+    <span class="str">"llm"</span>:    [<span class="str">"RAG"</span>, <span class="str">"structured outputs"</span>],
+    <span class="str">"quality"</span>:[<span class="str">"evaluation"</span>, <span class="str">"observability"</span>],
+    <span class="str">"infra"</span>:  [<span class="str">"FastAPI / Docker"</span>, <span class="str">"clean services"</span>],
 }</div>
       </div>
     </div>
